@@ -25,7 +25,7 @@
                     <td><%= foto.titulo %></td>
                     <td><%= foto.descripcion %></td>
                     <td><%= foto.ruta %></td>
-                    <td><%= foto.createdAt.toLocaleDateString('en-US') %></td>
+                    <td><%= foto.createdAt ? foto.createdAt.toLocaleDateString('en-US') : 'Fecha no disponible' %></td>
                     <td><%= foto.etiqueta.map(instancia => instancia.texto).join(", ") %></td>
                 </tr>
             <% }); %>

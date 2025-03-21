@@ -38,8 +38,7 @@ router.get('/findAll/view', function (req, res, next) {
         .catch(error => res.status(400).send(error))
 });
 
-router.get('/findAllByRate/json',
-    function (req, res, next) {
+router.get('/findAllByRate/json', function (req, res, next) {
         let lower = parseFloat(req.query.lower);
         let higher = parseFloat(req.query.higher);
         
